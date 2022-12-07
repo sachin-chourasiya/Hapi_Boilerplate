@@ -1,0 +1,57 @@
+{
+  "name": "hapi-boilerplate",
+  "version": "1.0.0",
+  "description": "Hapi Js boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing jest",
+    "test:ci": "NODE_ENV=testing jest",
+    "test:watch": "NODE_ENV=testing jest --watch",
+    "test:coverage": "NODE_ENV=testing jest --coverage",
+    "start:prod": "NODE_ENV=production ./node_modules/nodemon/bin/nodemon.js index.js",
+    "start": "NODE_ENV=development ./node_modules/nodemon/bin/nodemon.js index.js",
+    "check": "npm run format && npm run lint",
+    "format": "prettier --write \"**/*.+(js|yml|yaml|json)\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhamjesh/hapi-boilerplate.git"
+  },
+  "author": "amjesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhamjesh/hapi-boilerplate/issues"
+  },
+  "homepage": "https://github.com/singhamjesh/hapi-boilerplate#readme",
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "@hapi/hapi": "^21.1.0",
+    "@hapi/inert": "^7.0.0",
+    "@hapi/vision": "^7.0.0",
+    "dotenv": "^16.0.3",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-pino": "^8.5.0",
+    "hapi-query-builder": "^1.5.0",
+    "hapi-swagger": "^15.0.0",
+    "jwks-rsa": "^3.0.0",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.7.5",
+    "mongoose-paginate-v2": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.6",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "prettier": "2.8.0"
+  }
+}
